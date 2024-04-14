@@ -5,7 +5,7 @@ import { getDefault } from './src/API';
 import CocktailListItems from './src/components/CocktailListItems';
 
 export default function App() {
-  const [cocktails, setCocktails] = useState([]);
+  const [cocktails, setCocktails] = useState([null]);
 
   useEffect(()=>{
     (async()=> {
@@ -18,7 +18,7 @@ export default function App() {
   if (cocktails == null || cocktails == undefined) {
     return (
       <View>
-        <Text>NTM</Text>
+        <Text>Chargement...</Text>
       </View>
     )
   }
